@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información - COD Mobile</title>
     <style> 
-        /* Copiar estilos básicos del body y main */
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #1e1e1e; color: #f4f4f4; }
         
-        /* Encabezado sin imagen de fondo */
+        /* Aumentamos el padding del header para darle presencia */
         header { 
             background-color: #333; 
             color: #00ff99; 
-            padding: 20px 0;
+            padding: 40px 0; /* Padding aumentado */
             text-align: center; 
-            border-bottom: 3px solid #00ff99; 
-            background-image: none; /* Sin fondo de imagen */
+            border-bottom: 5px solid #00ff99; /* Borde más grueso */
+            background-image: none;
             text-shadow: none;
         }
-        
-        /* Estilos del título h1 en la cabecera */
         header h1 {
             background-color: transparent; 
             display: inline; 
             padding: 0;
             border-radius: 0;
-            font-size: 2.5em;
+            font-size: 2.8em; /* Título un poco más grande */
         }
-
         main { padding: 20px; max-width: 900px; margin: 20px auto; background-color: #2a2a2a; border-radius: 8px; }
         .back-link { color: #00ff99; text-decoration: none; font-weight: bold; }
+        .download-button {
+            background-color: #00ff99; 
+            color: #1e1e1e; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            display: inline-block;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +59,7 @@
         <img src="cod_mobile.jpg" alt="Carátula COD Mobile" style="max-width: 300px; display: block; margin: 20px auto 10px auto; border-radius: 8px;">
         
         <p style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter" target="_blank" style="background-color: #00ff99; color: #1e1e1e; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+            <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter" target="_blank" class="download-button">
                 Descargar ahora (Android/iOS)
             </a>
         </p>
