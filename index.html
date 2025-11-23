@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Gamer - Tu Portal de Juegos Favoritos</title>
+    <title>Zona Gamer - Portal de Juegos Favoritos</title>
     <style>
-        /* Estilos CSS básicos para que se vea mejor */
+        /* Estilos CSS básicos (Ajustados para ver las carátulas) */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,17 +22,45 @@
         }
         main {
             padding: 20px;
-            max-width: 900px;
+            max-width: 1000px; /* Ancho un poco mayor para las 4 columnas */
             margin: 20px auto;
             background-color: #2a2a2a;
             border-radius: 8px;
         }
-        .juego-card {
-            background-color: #3c3c3c;
-            margin-bottom: 15px;
+        /* Estilos para las tarjetas de juego (links) */
+        .catalogo {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Permite que bajen si la pantalla es pequeña */
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .juego-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #f4f4f4;
             padding: 15px;
-            border-left: 5px solid #00ff99;
-            border-radius: 4px;
+            background-color: #3c3c3c;
+            border-radius: 8px;
+            width: 200px; /* Ancho fijo para las carátulas */
+            transition: transform 0.3s;
+        }
+        .juego-link:hover {
+            transform: translateY(-5px); /* Efecto de elevación */
+            box-shadow: 0 5px 15px rgba(0, 255, 153, 0.3);
+            color: #00ff99;
+        }
+        .caratula {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
         }
     </style>
 </head>
@@ -40,9 +68,58 @@
 
     <header>
         <h1>👾 Zona Gamer 🕹️</h1>
-        <p>Tu punto de encuentro para noticias, reseñas y novedades del mundo de los videojuegos.</p>
+        <p>Tu punto de encuentro para los juegos móviles más populares del momento.</p>
     </header>
 
     <main>
-        <section id="bienvenida">
-            <h2>¡Bienvenido al Nivel Principal!</h2>
+        <section id="juegos-destacados">
+            <h2>🔥 Catálogo de Juegos Populares</h2>
+            <p style="text-align: center;">Haz clic en la carátula para ver información detallada de cada juego.</p>
+            
+            <div class="catalogo">
+                
+                <a href="cod_mobile.html" class="juego-link">
+                    <img src="
+
+http://googleusercontent.com/image_collection/image_retrieval/2012331525434967455_0
+" alt="Carátula COD Mobile" class="caratula">
+                    <h3>COD Mobile</h3>
+                    <p style="font-size: 0.8em; color: #aaa;">Shooter Móvil Táctico</p>
+                </a>
+
+                <a href="free_fire.html" class="juego-link">
+                    <img src="
+
+http://googleusercontent.com/image_collection/image_retrieval/17264338079836538820_0
+" alt="Carátula Free Fire" class="caratula">
+                    <h3>Free Fire</h3>
+                    <p style="font-size: 0.8em; color: #aaa;">Battle Royale Intenso</p>
+                </a>
+                
+                <a href="stumble_guys.html" class="juego-link">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/13780560673792547662_0" alt="Carátula Stumble Guys" class="caratula">
+                    <h3>Stumble Guys</h3>
+                    <p style="font-size: 0.8em; color: #aaa;">Carreras de Obstáculos Multijugador</p>
+                </a>
+
+                <a href="clash_royale.html" class="juego-link">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/4599079349719976640_0" alt="Carátula Clash Royale" class="caratula">
+                    <h3>Clash Royale</h3>
+                    <p style="font-size: 0.8em; color: #aaa;">Estrategia y Cartas en Tiempo Real</p>
+                </a>
+                
+            </div>
+        </section>
+
+        <section id="contacto" style="margin-top: 40px; text-align: center;">
+            <h2>Información General</h2>
+            <p>Síguenos para estar al tanto de las últimas actualizaciones y eventos en el mundo gamer.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Zona Gamer. Portal Creado con GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
