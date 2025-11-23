@@ -16,15 +16,12 @@
         header {
             background-color: #333;
             color: #00ff99;
-            
-            /* AUMENTAMOS EL PADDING PARA DAR ESPACIO AL FONDO */
             padding: 60px 0; 
-            
             text-align: center;
             border-bottom: 3px solid #00ff99;
 
             /* --- ESTILOS DE FONDO RETRO APLICADOS --- */
-            background-image: url('fondo_retro.jpg'); /* ¡Ruta al archivo subido! */
+            background-image: url('fondo_retro.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat; 
@@ -87,6 +84,19 @@
             border-radius: 5px;
             margin-bottom: 10px;
         }
+        .logout-btn {
+            background-color: #ff4444; 
+            color: white; 
+            padding: 8px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .logout-btn:hover {
+            background-color: #cc3333;
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -95,10 +105,33 @@
     </style>
 </head>
 <body>
+    <script>
+        // --- VALIDACIÓN DE SESIÓN EN JAVASCRIPT ---
+        // Verifica si la bandera 'hasLoggedIn' existe en el almacenamiento local
+        if (localStorage.getItem('hasLoggedIn') !== 'true') {
+            // Si no ha iniciado sesión, redirige al formulario de registro/login
+            window.location.href = 'registro.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('hasLoggedIn');
+            localStorage.removeItem('username');
+            window.location.href = 'registro.html';
+        }
+
+        // Función para mostrar el nombre de usuario
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcome-message').textContent = `¡Bienvenido/a, ${username}!`;
+            }
+        });
+    </script>
 
     <header>
         <h1>👾 Zona Gamer 🕹️</h1>
-        <p>Tu punto de encuentro para los juegos móviles más populares del momento.</p>
+        <p id="welcome-message">Tu punto de encuentro para los juegos móviles más populares del momento.</p>
+        <button onclick="logout()" class="logout-btn">Cerrar Sesión</button>
     </header>
 
     <main>
