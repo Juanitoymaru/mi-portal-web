@@ -6,21 +6,33 @@
     <title>Información - Stumble Guys</title>
     <style> 
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #1e1e1e; color: #f4f4f4; }
+        
+        /* ESTILOS DE CABECERA CON FONDO RETRO APLICADOS */
         header { 
             background-color: #333; 
             color: #00ff99; 
-            padding: 40px 0; /* Padding aumentado */
+            padding: 60px 0; /* Padding aumentado para que la imagen se vea bien */
             text-align: center; 
-            border-bottom: 5px solid #00ff99; /* Borde más grueso */
-            background-image: none;
-            text-shadow: none;
+            border-bottom: 5px solid #00ff99; 
+            
+            /* --- FONDO RETRO --- */
+            background-image: url('fondo_retro.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            
+            /* Sombra de texto para asegurar que las letras se lean bien sobre el fondo */
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1), 
+                         0px 0px 20px rgba(0, 0, 0, 0.8); 
         }
+        /* FIN DE ESTILOS DE CABECERA CON FONDO RETRO */
+
         header h1 {
             background-color: transparent; 
             display: inline; 
             padding: 0;
             border-radius: 0;
-            font-size: 2.8em; /* Título un poco más grande */
+            font-size: 2.8em; 
         }
         main { padding: 20px; max-width: 900px; margin: 20px auto; background-color: #2a2a2a; border-radius: 8px; }
         .back-link { color: #00ff99; text-decoration: none; font-weight: bold; }
